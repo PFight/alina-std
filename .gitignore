@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+node_modules/**/*
+
+!node_modules/maskjs
+!node_modules/maskjs/lib
+!node_modules/maskjs/lib/mask.js
+.vs
+bin
+obj
+src/**/*.js
+alina.csproj.user

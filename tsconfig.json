@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "es6",
+		"moduleResolution": "node",
+        "noEmitHelpers": false,
+        "importHelpers": false,
+        "strictFunctionTypes": true,
+        "lib": [ "es6", "dom" ],
+        "declaration": false
+	},
+    "include": [
+        "src/**/*.ts"
+    ],
+	"exclude": [
+	],
+	"compileOnSave": true
+}

@@ -1,0 +1,41 @@
+{
+  "name": "alina-std",
+  "version": "0.0.1",
+  "description": "Standard components and extensions for AlinaJS",
+  "main": "dist/alina-std.js",
+  "module": "dist/alina-std-es.js",
+  "scripts": {
+    "compile": "tsc -p tsconfig.json",
+    "build-dts": "tsc -p tsconfig.dts.json && rm dist/alina-std",
+    "bundle": "rollup -c rollup-config.js src/alina-std.js -o dist/alina-std-es.js",
+    "bundle-umd": "rollup -c rollup-config-umd.js src/alina-std.js -o dist/alina-std-es6.js",
+    "transpile": "tsc dist/alina-std-es6.js --outFile dist/alina-std.js --allowJS --target es5 && rm dist/alina-std-es6.js",
+    "uglify": "uglifyjs ./dist/alina-std.js -o ./dist/alina-std.min.js",
+    "build": "rm -rf dist && npm run compile && npm run build-dts && npm run bundle && npm run bundle-umd && npm run transpile && npm run uglify && npm run pack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "rm -f alina-0.0.1.tgz && npm pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PFight/alina-std.git"
+  },
+  "keywords": [
+    "html",
+    "render",
+    "alina"
+  ],
+  "author": "PFight <PFight77@gmail.com> (https://github.com/PFight)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PFight/alina-std/issues"
+  },
+  "homepage": "https://github.com/PFight/alina-std#readme",
+  "dependencies": {
+    "alina-core": "file:../alina-core/alina-core-0.0.1.tgz"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.1.6",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "typings": "dist/alina-std.d.ts"
+}
