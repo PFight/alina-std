@@ -4,7 +4,7 @@ import * as AlStd from "../alina-std";
 export type Alina = Al.NodeContext & AlStd.StandardExtensions;
 
 export class AlinaComponent<ContextT extends Alina = Alina>
-  extends Al.Component<ContextT> implements AlStd.ITemplateProcessor<ContextT>
+  extends Al.AlinaComponent<ContextT> implements AlStd.ITemplateProcessor<ContextT>
 {
   addChild(template: HTMLTemplateElement, render?: (renderer: ContextT) => void): void {
     this.root.tpl().addChild(template, render);
