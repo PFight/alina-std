@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/PFight/alina-std#readme",
   "dependencies": {
-    "alina-core": "file:../alina-core/alina-core-0.0.1.tgz"
+    "alina-core": "^0.0.1"
   },
   "devDependencies": {
     "uglify-js": "^3.1.6",
